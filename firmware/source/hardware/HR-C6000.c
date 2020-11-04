@@ -788,7 +788,7 @@ inline static void HRC6000SysInterruptHandler(void)
 	if (!trxTransmissionEnabled) // ignore the LC data when we are transmitting
 	{
 		//if ((!ccHold) && (nonVolatileSettings.dmrDestinationFilter < DMR_CCTS_FILTER_CC))
-		if ((!ccHold) && (nonVolatileSettings.dmrCcTsFilter == DMR_CCTS_FILTER_NONE || nonVolatileSettings.dmrCcTsFilter == DMR_CCTS_FILTER_TS))
+		if ((!ccHold) && (nonVolatileSettings.dmrCcTsFilter == DMR_CCTS_FILTER_CC || nonVolatileSettings.dmrCcTsFilter == DMR_CCTS_FILTER_TS))
 		{
 			if(rxColorCode == lastRxColorCode)
 			{
